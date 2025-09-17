@@ -204,8 +204,8 @@
     <script>
         document.getElementById('submit-btn').addEventListener('click', function(event) {
             event.preventDefault();
-            const nameInput = document.getElementById('love-name').value.trim();
-            if (nameInput.toLowerCase() === "hareram") {
+            const nameInput = document.getElementById('love-name').value.trim().toLowerCase().replace(/\s+/g, "");
+            if (nameInput === "hareram") {
                 alert("Welcome to the Cake Party! 🎂");
                 window.location.href = "main.html";
             } else {
